@@ -1,0 +1,419 @@
+
+> processor-mock@1.0.0 dev
+> tsx src/index.ts
+
+{"level":30,"time":1763578160328,"pid":894001,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","msg":"Server listening at http://0.0.0.0:4801"}
+{"level":30,"time":1763578160329,"pid":894001,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","msg":"processor-mock listening on :4801"}
+{"level":30,"time":1763578160828,"pid":894001,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","reqId":"req-1","req":{"method":"GET","url":"/health","hostname":"localhost:4801","remoteAddress":"127.0.0.1","remotePort":57720},"msg":"incoming request"}
+{"level":30,"time":1763578160834,"pid":894001,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","reqId":"req-1","res":{"statusCode":200},"responseTime":5.55259895324707,"msg":"request completed"}
+
+> api@0.0.1 dev
+> nest start --watch
+
+[2J[3J[H[[90m10:49:21 AM[0m] Starting compilation in watch mode...
+
+[[90m10:49:24 AM[0m] Found 0 errors. Watching for file changes.
+
+(node:894051) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[32m[Nest] 894139  - [39m11/19/2025, 10:49:24 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 894139  - [39m11/19/2025, 10:49:24 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +11ms[39m
+[32m[Nest] 894139  - [39m11/19/2025, 10:49:24 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 894139  - [39m11/19/2025, 10:49:24 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +3ms[39m
+[32m[Nest] 894139  - [39m11/19/2025, 10:49:24 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 894139  - [39m11/19/2025, 10:49:24 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 894139  - [39m11/19/2025, 10:49:24 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 894139  - [39m11/19/2025, 10:49:24 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 894139  - [39m11/19/2025, 10:49:24 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 894139  - [39m11/19/2025, 10:49:24 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+API listening on :3000
+
+> web@0.0.0 dev
+> ng serve
+
+❯ Building...
+✔ Building...
+Initial chunk files | Names         | Raw size
+main.js             | main          | 47.75 kB | 
+styles.css          | styles        | 96 bytes | 
+polyfills.js        | polyfills     | 95 bytes | 
+
+                    | Initial total | 47.94 kB
+
+Application bundle generation complete. [1.571 seconds] - 2025-11-19T18:49:27.434Z
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://localhost:4200/
+{"level":30,"time":1763578181556,"pid":894001,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","reqId":"req-2","req":{"method":"GET","url":"/health","hostname":"localhost:4801","remoteAddress":"127.0.0.1","remotePort":46472},"msg":"incoming request"}
+{"level":30,"time":1763578181557,"pid":894001,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","reqId":"req-2","res":{"statusCode":200},"responseTime":0.4937741756439209,"msg":"request completed"}
+{"level":30,"time":1763578188879,"pid":894001,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","reqId":"req-3","req":{"method":"POST","url":"/processor/charge","hostname":"localhost:4801","remoteAddress":"127.0.0.1","remotePort":56528},"msg":"incoming request"}
+[32m[Nest] 894139  - [39m11/19/2025, 10:49:48 AM [32m    LOG[39m [38;5;3m[WebhooksController] [39mObject(5) {
+  msg: [32m'Auth hold placed'[39m,
+  id: [32m'evt_1763578188884'[39m,
+  amount_cents: [33m2599[39m,
+  mcc: [32m'5812'[39m,
+  last4: [32m'4242'[39m
+}
+{"level":30,"time":1763578188954,"pid":894001,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","type":"authorization.requested","msg":"Webhook delivered"}
+{"level":30,"time":1763578188954,"pid":894001,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","reqId":"req-3","res":{"statusCode":200},"responseTime":75.47507905960083,"msg":"request completed"}
+[32m[Nest] 894139  - [39m11/19/2025, 10:49:50 AM [32m    LOG[39m [38;5;3m[WebhooksController] [39mObject(4) {
+  msg: [32m'Capture/settlement'[39m,
+  id: [32m'cap_evt_1763578188884'[39m,
+  auth_id: [32m'evt_1763578188884'[39m,
+  amount_cents: [33m2599[39m
+}
+{"level":30,"time":1763578190463,"pid":894001,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","type":"clearing.settled","msg":"Webhook delivered"}
+[2J[3J[H[[90m10:51:50 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/webhooks/webhooks.controller.ts[0m:[93m137[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m137[0m     return { ok: true };
+[7m   [0m [91m    ~~~~~~[0m
+
+[[90m10:51:50 AM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m10:51:53 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/webhooks/webhooks.controller.ts[0m:[93m135[0m:[93m11[0m - [91merror[0m[90m TS2304: [0mCannot find name 'Prom'.
+
+[7m135[0m     await Prom
+[7m   [0m [91m          ~~~~[0m
+
+[[90m10:51:54 AM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m10:51:55 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/webhooks/webhooks.controller.ts[0m:[93m135[0m:[93m19[0m - [91merror[0m[90m TS2339: [0mProperty 're' does not exist on type 'PromiseConstructor'.
+
+[7m135[0m     await Promise.re
+[7m   [0m [91m                  ~~[0m
+
+[[90m10:51:56 AM[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m10:51:58 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m10:51:58 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 896031  - [39m11/19/2025, 10:51:58 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 896031  - [39m11/19/2025, 10:51:58 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +11ms[39m
+[32m[Nest] 896031  - [39m11/19/2025, 10:51:58 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 896031  - [39m11/19/2025, 10:51:58 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +8ms[39m
+[32m[Nest] 896031  - [39m11/19/2025, 10:51:58 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 896031  - [39m11/19/2025, 10:51:58 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 896031  - [39m11/19/2025, 10:51:58 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 896031  - [39m11/19/2025, 10:51:58 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 896031  - [39m11/19/2025, 10:51:58 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 896031  - [39m11/19/2025, 10:51:58 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+API listening on :3000
+[2J[3J[H[[90m10:52:13 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m10:52:13 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 896208  - [39m11/19/2025, 10:52:14 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 896208  - [39m11/19/2025, 10:52:14 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +16ms[39m
+[32m[Nest] 896208  - [39m11/19/2025, 10:52:14 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 896208  - [39m11/19/2025, 10:52:14 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +4ms[39m
+[32m[Nest] 896208  - [39m11/19/2025, 10:52:14 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 896208  - [39m11/19/2025, 10:52:14 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 896208  - [39m11/19/2025, 10:52:14 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 896208  - [39m11/19/2025, 10:52:14 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 896208  - [39m11/19/2025, 10:52:14 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 896208  - [39m11/19/2025, 10:52:14 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[31m[Nest] 896208  - [39m11/19/2025, 10:52:14 AM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +3ms[39m
+node:net:1940
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at ExpressAdapter.listen (/home/perry-davis/Documents/flexpay-mini/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /home/perry-davis/Documents/flexpay-mini/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/home/perry-davis/Documents/flexpay-mini/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/home/perry-davis/Documents/flexpay-mini/apps/api/src/main.ts:24:3) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v24.11.1
+[2J[3J[H[[90m10:52:26 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m10:52:26 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 896341  - [39m11/19/2025, 10:52:26 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 896341  - [39m11/19/2025, 10:52:26 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +19ms[39m
+[32m[Nest] 896341  - [39m11/19/2025, 10:52:26 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 896341  - [39m11/19/2025, 10:52:26 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +5ms[39m
+[32m[Nest] 896341  - [39m11/19/2025, 10:52:26 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 896341  - [39m11/19/2025, 10:52:26 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 896341  - [39m11/19/2025, 10:52:26 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 896341  - [39m11/19/2025, 10:52:26 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 896341  - [39m11/19/2025, 10:52:26 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 896341  - [39m11/19/2025, 10:52:26 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +2ms[39m
+API listening on :3000
+[2J[3J[H[[90m10:52:35 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m10:52:35 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 896463  - [39m11/19/2025, 10:52:36 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 896463  - [39m11/19/2025, 10:52:36 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +15ms[39m
+[32m[Nest] 896463  - [39m11/19/2025, 10:52:36 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 896463  - [39m11/19/2025, 10:52:36 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +6ms[39m
+[32m[Nest] 896463  - [39m11/19/2025, 10:52:36 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +4ms[39m
+[32m[Nest] 896463  - [39m11/19/2025, 10:52:36 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 896463  - [39m11/19/2025, 10:52:36 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 896463  - [39m11/19/2025, 10:52:36 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 896463  - [39m11/19/2025, 10:52:36 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 896463  - [39m11/19/2025, 10:52:36 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +2ms[39m
+[31m[Nest] 896463  - [39m11/19/2025, 10:52:36 AM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +3ms[39m
+node:net:1940
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at ExpressAdapter.listen (/home/perry-davis/Documents/flexpay-mini/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /home/perry-davis/Documents/flexpay-mini/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/home/perry-davis/Documents/flexpay-mini/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/home/perry-davis/Documents/flexpay-mini/apps/api/src/main.ts:24:3) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v24.11.1
+[2J[3J[H[[90m10:52:37 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m10:52:37 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 896487  - [39m11/19/2025, 10:52:37 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 896487  - [39m11/19/2025, 10:52:37 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +15ms[39m
+[32m[Nest] 896487  - [39m11/19/2025, 10:52:37 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 896487  - [39m11/19/2025, 10:52:37 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +5ms[39m
+[32m[Nest] 896487  - [39m11/19/2025, 10:52:37 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 896487  - [39m11/19/2025, 10:52:37 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 896487  - [39m11/19/2025, 10:52:37 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 896487  - [39m11/19/2025, 10:52:37 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 896487  - [39m11/19/2025, 10:52:37 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 896487  - [39m11/19/2025, 10:52:37 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[31m[Nest] 896487  - [39m11/19/2025, 10:52:37 AM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +3ms[39m
+node:net:1940
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at ExpressAdapter.listen (/home/perry-davis/Documents/flexpay-mini/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /home/perry-davis/Documents/flexpay-mini/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/home/perry-davis/Documents/flexpay-mini/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/home/perry-davis/Documents/flexpay-mini/apps/api/src/main.ts:24:3) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v24.11.1
+[2J[3J[H[[90m10:52:44 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m10:52:44 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 896571  - [39m11/19/2025, 10:52:44 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 896571  - [39m11/19/2025, 10:52:44 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +21ms[39m
+[32m[Nest] 896571  - [39m11/19/2025, 10:52:44 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 896571  - [39m11/19/2025, 10:52:44 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +7ms[39m
+[32m[Nest] 896571  - [39m11/19/2025, 10:52:44 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 896571  - [39m11/19/2025, 10:52:44 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 896571  - [39m11/19/2025, 10:52:44 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 896571  - [39m11/19/2025, 10:52:44 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 896571  - [39m11/19/2025, 10:52:44 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 896571  - [39m11/19/2025, 10:52:44 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +3ms[39m
+API listening on :3000
+[2J[3J[H[[90m10:54:00 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m10:54:01 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 897419  - [39m11/19/2025, 10:54:01 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 897419  - [39m11/19/2025, 10:54:01 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +19ms[39m
+[32m[Nest] 897419  - [39m11/19/2025, 10:54:01 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 897419  - [39m11/19/2025, 10:54:01 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +6ms[39m
+[32m[Nest] 897419  - [39m11/19/2025, 10:54:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +4ms[39m
+[32m[Nest] 897419  - [39m11/19/2025, 10:54:01 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 897419  - [39m11/19/2025, 10:54:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 897419  - [39m11/19/2025, 10:54:01 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 897419  - [39m11/19/2025, 10:54:01 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 897419  - [39m11/19/2025, 10:54:01 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +2ms[39m
+[31m[Nest] 897419  - [39m11/19/2025, 10:54:01 AM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +3ms[39m
+node:net:1940
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at ExpressAdapter.listen (/home/perry-davis/Documents/flexpay-mini/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /home/perry-davis/Documents/flexpay-mini/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/home/perry-davis/Documents/flexpay-mini/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/home/perry-davis/Documents/flexpay-mini/apps/api/src/main.ts:25:3) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v24.11.1
+[2J[3J[H[[90m10:56:12 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m10:56:12 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 898903  - [39m11/19/2025, 10:56:12 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 898903  - [39m11/19/2025, 10:56:12 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +16ms[39m
+[32m[Nest] 898903  - [39m11/19/2025, 10:56:12 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 898903  - [39m11/19/2025, 10:56:12 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +5ms[39m
+[32m[Nest] 898903  - [39m11/19/2025, 10:56:12 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 898903  - [39m11/19/2025, 10:56:12 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 898903  - [39m11/19/2025, 10:56:12 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 898903  - [39m11/19/2025, 10:56:12 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 898903  - [39m11/19/2025, 10:56:12 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 898903  - [39m11/19/2025, 10:56:12 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +2ms[39m
+API listening on :3000
+[2J[3J[H[[90m10:56:12 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m10:56:12 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 898945  - [39m11/19/2025, 10:56:13 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 898945  - [39m11/19/2025, 10:56:13 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +15ms[39m
+[32m[Nest] 898945  - [39m11/19/2025, 10:56:13 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 898945  - [39m11/19/2025, 10:56:13 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +5ms[39m
+[32m[Nest] 898945  - [39m11/19/2025, 10:56:13 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 898945  - [39m11/19/2025, 10:56:13 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 898945  - [39m11/19/2025, 10:56:13 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 898945  - [39m11/19/2025, 10:56:13 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 898945  - [39m11/19/2025, 10:56:13 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 898945  - [39m11/19/2025, 10:56:13 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +2ms[39m
+API listening on :3000
+[2J[3J[H[[90m10:58:20 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m10:58:20 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 901272  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 901272  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +14ms[39m
+[32m[Nest] 901272  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 901272  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +5ms[39m
+[32m[Nest] 901272  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 901272  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 901272  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 901272  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 901272  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 901272  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +2ms[39m
+API listening on :3000
+[2J[3J[H[[90m10:58:21 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m10:58:21 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 901306  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 901306  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +13ms[39m
+[32m[Nest] 901306  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 901306  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +4ms[39m
+[32m[Nest] 901306  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 901306  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 901306  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 901306  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 901306  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 901306  - [39m11/19/2025, 10:58:21 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +2ms[39m
+API listening on :3000
+[2J[3J[H[[90m10:58:23 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m10:58:23 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 901376  - [39m11/19/2025, 10:58:24 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 901376  - [39m11/19/2025, 10:58:24 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +17ms[39m
+[32m[Nest] 901376  - [39m11/19/2025, 10:58:24 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 901376  - [39m11/19/2025, 10:58:24 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +4ms[39m
+[32m[Nest] 901376  - [39m11/19/2025, 10:58:24 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +4ms[39m
+[32m[Nest] 901376  - [39m11/19/2025, 10:58:24 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 901376  - [39m11/19/2025, 10:58:24 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 901376  - [39m11/19/2025, 10:58:24 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 901376  - [39m11/19/2025, 10:58:24 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 901376  - [39m11/19/2025, 10:58:24 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +2ms[39m
+API listening on :3000
+[2J[3J[H[[90m11:11:17 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m11:11:17 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 910702  - [39m11/19/2025, 11:11:17 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 910702  - [39m11/19/2025, 11:11:17 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +11ms[39m
+[32m[Nest] 910702  - [39m11/19/2025, 11:11:17 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 910702  - [39m11/19/2025, 11:11:17 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +8ms[39m
+[32m[Nest] 910702  - [39m11/19/2025, 11:11:17 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 910702  - [39m11/19/2025, 11:11:17 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 910702  - [39m11/19/2025, 11:11:17 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 910702  - [39m11/19/2025, 11:11:17 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 910702  - [39m11/19/2025, 11:11:17 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 910702  - [39m11/19/2025, 11:11:17 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +2ms[39m
+API listening on :3000
+[2J[3J[H[[90m11:11:18 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m11:11:18 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 910737  - [39m11/19/2025, 11:11:18 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 910737  - [39m11/19/2025, 11:11:18 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +13ms[39m
+[32m[Nest] 910737  - [39m11/19/2025, 11:11:18 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 910737  - [39m11/19/2025, 11:11:18 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +5ms[39m
+[32m[Nest] 910737  - [39m11/19/2025, 11:11:18 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 910737  - [39m11/19/2025, 11:11:18 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 910737  - [39m11/19/2025, 11:11:18 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 910737  - [39m11/19/2025, 11:11:18 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 910737  - [39m11/19/2025, 11:11:18 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 910737  - [39m11/19/2025, 11:11:18 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +2ms[39m
+API listening on :3000
+Killed
+[2J[3J[H[[90m11:13:56 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m11:13:56 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 913948  - [39m11/19/2025, 11:13:57 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 913948  - [39m11/19/2025, 11:13:57 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +15ms[39m
+[32m[Nest] 913948  - [39m11/19/2025, 11:13:57 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 913948  - [39m11/19/2025, 11:13:57 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +4ms[39m
+[32m[Nest] 913948  - [39m11/19/2025, 11:13:57 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 913948  - [39m11/19/2025, 11:13:57 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 913948  - [39m11/19/2025, 11:13:57 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 913948  - [39m11/19/2025, 11:13:57 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 913948  - [39m11/19/2025, 11:13:57 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 913948  - [39m11/19/2025, 11:13:57 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +2ms[39m
+API listening on :3000
+[2J[3J[H[[90m11:13:57 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m11:13:57 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 914010  - [39m11/19/2025, 11:13:58 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 914010  - [39m11/19/2025, 11:13:58 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +14ms[39m
+[32m[Nest] 914010  - [39m11/19/2025, 11:13:58 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 914010  - [39m11/19/2025, 11:13:58 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +4ms[39m
+[32m[Nest] 914010  - [39m11/19/2025, 11:13:58 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 914010  - [39m11/19/2025, 11:13:58 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 914010  - [39m11/19/2025, 11:13:58 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 914010  - [39m11/19/2025, 11:13:58 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 914010  - [39m11/19/2025, 11:13:58 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 914010  - [39m11/19/2025, 11:13:58 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +2ms[39m
+API listening on :3000
+Killed

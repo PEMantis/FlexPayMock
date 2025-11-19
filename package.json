@@ -1,0 +1,9 @@
+{
+  "name": "flexpay-mini",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "npm --workspace apps/processor-mock run dev",
+    "dev:processor": "npm --workspace apps/processor-mock run dev"
+  }
+}
