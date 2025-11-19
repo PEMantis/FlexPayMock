@@ -1,23 +1,92 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
-generator client {
-  provider = "prisma-client"
-  output   = "../generated/prisma"
-}
-
 datasource db {
   provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum TransactionKind {
+  auth
+  capture
+  reversal
+  refund
+  manual
+}
+
+enum LedgerSide {
+  debit
+  credit
+}
+
+model User {
+  id        String    @id @default(uuid())
+  email     String    @unique
+  password  String
+  createdAt DateTime  @default(now())
+  accounts  Account[]
+}
+
+model Account {
+  id        String   @id @default(uuid())
+  userId    String
+  name      String
+  currency  String   @default("USD")
+  balance   Int      @default(0)
+  createdAt DateTime @default(now())
+
+  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  txns          Transaction[]
+  ledgerEntries LedgerEntry[] @relation("AccountLedger")
+
+  @@index([userId])
+  @@index([createdAt])
+}
+
+model Transaction {
+  id          String          @id @default(uuid())
+  accountId   String
+  kind        TransactionKind
+  amountCents Int
+  mcc         String?
+  extId       String?         @unique
+  createdAt   DateTime        @default(now())
+
+  account     Account       @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  ledgerLines LedgerEntry[]
+
+  @@index([accountId, createdAt])
+  @@index([extId])
+}
+
+model LedgerEntry {
+  id          String     @id @default(uuid())
+  txnId       String
+  accountId   String
+  side        LedgerSide
+  amountCents Int
+  createdAt   DateTime   @default(now())
+
+  txn     Transaction @relation(fields: [txnId], references: [id], onDelete: Cascade)
+  account Account     @relation("AccountLedger", fields: [accountId], references: [id], onDelete: Cascade)
+
+  @@index([txnId])
+  @@index([accountId, createdAt])
+}
+
+model IdempotencyKey {
+  key       String   @id
+  createdAt DateTime @default(now())
 }
 
 model ProcessorEvent {
-  id           String   @id @default(uuid())
-  type         String
-  authId       String?
-  amountCents  Int
-  payload      Json
-  createdAt    DateTime @default(now())
+  id          String   @id @default(uuid())
+  type        String
+  authId      String?
+  amountCents Int
+  payload     Json
+  createdAt   DateTime @default(now())
+
+  @@index([type, createdAt])
 }

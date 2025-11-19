@@ -1,1 +1,30 @@
-node_modules
+# Node
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+package-lock.json
+
+# Builds & caches
+dist/
+.tmp/
+.temp/
+.cache/
+.angular/
+.vite/
+*.tsbuildinfo
+
+# Logs
+*.log
+logs/
+.dev/logs/
+
+# Env
+.env
+apps/*/.env
+
+# Prisma generated clients (handled by install/generate)
+**/node_modules/@prisma/client/
+
+# Docker
+infra/*.tmp

@@ -1,5 +1,5 @@
 
-> web@0.0.0 dev
+> flexpay-web@0.0.0 dev
 > ng serve
 
 ❯ Building...
@@ -11,7 +11,7 @@ polyfills.js        | polyfills     | 95 bytes |
 
                     | Initial total | 47.94 kB
 
-Application bundle generation complete. [1.417 seconds] - 2025-11-19T19:14:05.267Z
+Application bundle generation complete. [1.537 seconds] - 2025-11-19T22:01:06.784Z
 
 Watch mode enabled. Watching for file changes...
 NOTE: Raw file sizes do not reflect development server per-request transformations.

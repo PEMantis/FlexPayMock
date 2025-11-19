@@ -1,9 +1,28 @@
 {
-  "name": "flexpay-mini",
-  "private": true,
-  "workspaces": ["apps/*", "packages/*"],
+  "name": "processor-mock",
+  "private": "true",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "dev": "npm --workspace apps/processor-mock run dev",
-    "dev:processor": "npm --workspace apps/processor-mock run dev"
-  }
+    "dev:processor": "npm --workspace apps/processor-mock run dev",
+    "api:generate": "npm --workspace apps/api exec prisma generate",
+    "api:migrate": "npm --workspace apps/api exec prisma migrate dev --name manual",
+    "api:typecheck": "tsc -p apps/api/tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "abstract-logging": "^2.0.1",
+    "fastify": "^4.29.1",
+    "pino": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "prisma": "^6.19.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "type": "module"
 }
