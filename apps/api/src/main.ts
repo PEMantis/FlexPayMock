@@ -4,9 +4,16 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
-  const port = Number(process.env.PORT ?? 3000);
-  await app.listen(port);
+
+  app.enableCors({
+    origin: 'http://localhost:4200',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: false,
+  });
+
+  await app.listen(3000, '0.0.0.0');
   // eslint-disable-next-line no-console
-  console.log(`API listening on :${port}`);
+  console.log('API listening on :3000');
 }
+
 bootstrap();

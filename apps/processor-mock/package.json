@@ -4,7 +4,7 @@
   "private": true,
   "type": "commonjs",
   "scripts": {
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx src/index.ts"
   },
   "dependencies": {
     "abstract-logging": "^2.0.1",

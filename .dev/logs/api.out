@@ -1,15 +1,20 @@
 
-> flexpay-api@0.0.1 dev
+> dev
 > tsx watch src/main.ts
 
-[32m[Nest] 1036424  - [39m11/19/2025, 2:01:04 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
-[32m[Nest] 1036424  - [39m11/19/2025, 2:01:04 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +14ms[39m
-[32m[Nest] 1036424  - [39m11/19/2025, 2:01:04 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 1036424  - [39m11/19/2025, 2:01:04 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +12ms[39m
-[32m[Nest] 1036424  - [39m11/19/2025, 2:01:04 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +9ms[39m
-[32m[Nest] 1036424  - [39m11/19/2025, 2:01:04 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +0ms[39m
-[32m[Nest] 1036424  - [39m11/19/2025, 2:01:04 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +1ms[39m
-[32m[Nest] 1036424  - [39m11/19/2025, 2:01:04 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +1ms[39m
-[32m[Nest] 1036424  - [39m11/19/2025, 2:01:04 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +5ms[39m
-[32m[Nest] 1036424  - [39m11/19/2025, 2:01:04 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +5ms[39m
+[32m[Nest] 1251462  - [39m11/19/2025, 6:27:36 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 1251462  - [39m11/19/2025, 6:27:36 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +11ms[39m
+[32m[Nest] 1251462  - [39m11/19/2025, 6:27:36 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 1251462  - [39m11/19/2025, 6:27:36 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebhooksModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 1251462  - [39m11/19/2025, 6:27:36 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTransactionsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 1251462  - [39m11/19/2025, 6:27:36 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/}:[39m[38;5;3m +3ms[39m
+[32m[Nest] 1251462  - [39m11/19/2025, 6:27:36 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/healthz, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 1251462  - [39m11/19/2025, 6:27:36 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mTransactionsController {/transactions}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 1251462  - [39m11/19/2025, 6:27:36 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/transactions, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 1251462  - [39m11/19/2025, 6:27:36 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWebhooksController {/webhooks}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 1251462  - [39m11/19/2025, 6:27:36 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/webhooks/processor, POST} route[39m[38;5;3m +1ms[39m
+Prisma connected
+[32m[Nest] 1251462  - [39m11/19/2025, 6:27:36 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +78ms[39m
 API listening on :3000
+[32m[Nest] 1251462  - [39m11/19/2025, 6:27:43 PM [32m    LOG[39m [38;5;3m[TransactionsController] [39m[32mGET /transactions cursor=NONE limit=5 accountId=NONE[39m
+[32m[Nest] 1251462  - [39m11/19/2025, 6:28:04 PM [32m    LOG[39m [38;5;3m[TransactionsController] [39m[32mGET /transactions cursor=NONE limit=20 accountId=NONE[39m

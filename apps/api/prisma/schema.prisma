@@ -1,23 +1,10 @@
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
-
 generator client {
   provider = "prisma-client-js"
 }
 
-enum TransactionKind {
-  auth
-  capture
-  reversal
-  refund
-  manual
-}
-
-enum LedgerSide {
-  debit
-  credit
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model User {
@@ -29,16 +16,15 @@ model User {
 }
 
 model Account {
-  id        String   @id @default(uuid())
-  userId    String
-  name      String
-  currency  String   @default("USD")
-  balance   Int      @default(0)
-  createdAt DateTime @default(now())
-
+  id            String        @id @default(uuid())
+  userId        String
+  name          String
+  currency      String        @default("USD")
+  balance       Int           @default(0)
+  createdAt     DateTime      @default(now())
   user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
-  txns          Transaction[]
   ledgerEntries LedgerEntry[] @relation("AccountLedger")
+  txns          Transaction[]
 
   @@index([userId])
   @@index([createdAt])
@@ -52,24 +38,22 @@ model Transaction {
   mcc         String?
   extId       String?         @unique
   createdAt   DateTime        @default(now())
-
-  account     Account       @relation(fields: [accountId], references: [id], onDelete: Cascade)
   ledgerLines LedgerEntry[]
+  account     Account         @relation(fields: [accountId], references: [id], onDelete: Cascade)
 
   @@index([accountId, createdAt])
   @@index([extId])
 }
 
 model LedgerEntry {
-  id          String     @id @default(uuid())
+  id          String      @id @default(uuid())
   txnId       String
   accountId   String
   side        LedgerSide
   amountCents Int
-  createdAt   DateTime   @default(now())
-
-  txn     Transaction @relation(fields: [txnId], references: [id], onDelete: Cascade)
-  account Account     @relation("AccountLedger", fields: [accountId], references: [id], onDelete: Cascade)
+  createdAt   DateTime    @default(now())
+  account     Account     @relation("AccountLedger", fields: [accountId], references: [id], onDelete: Cascade)
+  txn         Transaction @relation(fields: [txnId], references: [id], onDelete: Cascade)
 
   @@index([txnId])
   @@index([accountId, createdAt])
@@ -89,4 +73,17 @@ model ProcessorEvent {
   createdAt   DateTime @default(now())
 
   @@index([type, createdAt])
+}
+
+enum TransactionKind {
+  auth
+  capture
+  reversal
+  refund
+  manual
+}
+
+enum LedgerSide {
+  debit
+  credit
 }
