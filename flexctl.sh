@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# flexctl.sh — one-touch up/down/restart/logs/status for your dev stack
 # Location: repo root (~/Documents/flexpay-mini)
 
 set -euo pipefail
