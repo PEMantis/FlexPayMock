@@ -13,6 +13,7 @@
     "api:typecheck": "tsc -p apps/api/tsconfig.json --noEmit"
   },
   "dependencies": {
+    "@nestjs/config": "^4.0.2",
     "@nestjs/jwt": "^11.0.1",
     "@nestjs/passport": "^11.0.5",
     "@prisma/client": "^6.19.0",

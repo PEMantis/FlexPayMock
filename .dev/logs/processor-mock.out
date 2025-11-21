@@ -2,7 +2,7 @@
 > processor-mock@1.0.0 dev
 > tsx src/index.ts
 
-{"level":30,"time":1763752927034,"pid":2623018,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","msg":"Server listening at http://0.0.0.0:4801"}
-{"level":30,"time":1763752927034,"pid":2623018,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","msg":"mock listening on :4801"}
-{"level":30,"time":1763752927503,"pid":2623018,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","reqId":"req-1","req":{"method":"GET","url":"/health","hostname":"localhost:4801","remoteAddress":"127.0.0.1","remotePort":43504},"msg":"incoming request"}
-{"level":30,"time":1763752927509,"pid":2623018,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","reqId":"req-1","res":{"statusCode":200},"responseTime":5.479464054107666,"msg":"request completed"}
+{"level":30,"time":1763757343379,"pid":2680693,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","msg":"Server listening at http://0.0.0.0:4801"}
+{"level":30,"time":1763757343379,"pid":2680693,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","msg":"mock listening on :4801"}
+{"level":30,"time":1763757343629,"pid":2680693,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","reqId":"req-1","req":{"method":"GET","url":"/health","hostname":"localhost:4801","remoteAddress":"127.0.0.1","remotePort":34508},"msg":"incoming request"}
+{"level":30,"time":1763757343636,"pid":2680693,"hostname":"perry-davis-HP-Laptop-15-dy1xxx","reqId":"req-1","res":{"statusCode":200},"responseTime":6.125895023345947,"msg":"request completed"}

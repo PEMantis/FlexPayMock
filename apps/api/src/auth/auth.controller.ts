@@ -1,27 +1,31 @@
-// apps/api/src/auth/auth.controller.ts
-import { Body, Controller, Get, Post, Req, UseGuards } from '@nestjs/common';
+import { Body, Controller, Inject, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { JwtAuthGuard } from './jwt-auth.guard';
+
+class AuthDto {
+  email!: string;
+  password!: string;
+}
 
 @Controller('auth')
 export class AuthController {
-  constructor(private readonly auth: AuthService) {}
+  @Inject(AuthService)
+  private readonly authService!: AuthService;
+
+  constructor() {
+    console.log('AuthController constructed');
+  }
 
   @Post('register')
-  async register(@Body() body: { email: string; password: string }) {
-    const { email, password } = body;
-    return this.auth.register(email, password);
+  async register(@Body() body: AuthDto) {
+    console.log(
+      'AuthController.register called, this.authService =',
+      this.authService,
+    );
+    return this.authService.register(body.email, body.password);
   }
 
   @Post('login')
-  async login(@Body() body: { email: string; password: string }) {
-    const { email, password } = body;
-    return this.auth.login(email, password);
-  }
-
-  @UseGuards(JwtAuthGuard)
-  @Get('me')
-  async me(@Req() req: any) {
-    return req.user; // { userId, email }
+  async login(@Body() body: AuthDto) {
+    return this.authService.login(body.email, body.password);
   }
 }
